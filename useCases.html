@@ -1,8 +1,85 @@
 <ol>
-    <li>UC_1 Nahrání výsledků do systému</li>
-    <li>UC_2 Zobrazení výsledků oddílu</li>
-    <li>UC_3 Nahrání sportů pro turnus</li>
-    <li>UC_4 Nahrání oddílů turnusu</li>
-    <li>UC_5 Vytvoření nové šablony</li>
-    <li>UC_6 Editace stávající šablony</li>
+  <li>UC_1 Nahrání výsledků do systému</li>
+  <li>UC_2 Zobrazení a editace výsledků oddílu</li>
+  <li>UC_3 Vytvoření turnusu</li>
+  <li>UC_4 Vytvoření a editace nové šablony</li>
+  <li>UC_5 Kontrola výsledků a generace diplomů</li>
+</ol>
+<h2>UC_1 Nahrání výsledků do systému</h2>
+<h3>Vstupní podmínky</h3>
+<ul>
+  <li>Uživatel je přihlášený</li>
+  <li>Uživatel má zobrazenou obrazovku 1</li>
+</ul>
+<ol>
+  <li>Uživatel klikne na tlačítko +, které jej přenese na obrazovku 2</li>
+  <li>Uživatel klikne na tlačítko "Vybrat soubor" a vybere fotku s výsledky</li>
+  <li>Systém fotku posílá třetí straně</li>
+  <li>Systém zpracuje odpověď třetí strany</li>
+  <li>Systém vrací uživateli editovatelnou tabulku s výsledky</li>
+  <li>Uživatel zkontroluje výsledky případně je upraví</li>
+  <li>Uživatel potvrzuje výsledky a systém je následně uloží</li>
+</ol>
+
+<h2>UC_2 Zobrazení a editace výsledků oddílu</h2>
+<h3>Vstupní podmínky</h3>
+<ul>
+  <li>Uživatel je přihlášený</li>
+  <li>Uživatel má zobrazenou obrazovku 1</li>
+</ul>
+<ol>
+  <li>Uživatel vybírá sport pro, který chce zobrazit či editovat výsledky</li>
+  <li>Systém zovrazí výsledky</li>
+  <li>Uživatel může výsledky editovat</li>
+  <li>Uživatel potvrdí změny a systém je následně uloží</li>
+</ol>
+
+<h2>UC_3 Vytvoření turnusu</h2>
+<h3>Vstupní podmínky</h3>
+<ul>
+  <li>Admin je přihlášený</li>
+  <li>Admin má zobrazenou obrazovku 3</li>
+</ul>
+<ol>
+  <li>Admin vyplní rok, téma turnusu</li>
+  <li>
+    Admin vybere stávající sporty nebo vytvoří nové sporty, které se budou v
+    turnusu provozovat
+  </li>
+  <li>
+    Admin nahraje csv soubor ve formátu
+    'jmeno','prijmeni','trida?','role?','oddil' s osazenstvem tábora
+  </li>
+  <li>Admin zkontroluje formulář a potvrdí jej</li>
+  <li>Systém turnus uloží a vytvoří náležité entity</li>
+</ol>
+
+<h2>UC_4 Vytvoření a editace nové šablony</h2>
+<h3>Vstupní podmínky</h3>
+<ul>
+  <li>Admin je přihlášený</li>
+  <li>Admin má zobrazenou obrazovku 3</li>
+</ul>
+<ol>
+  <li>
+    Admin vidí PDF na pravé straně obrazovky a může si jej kdykoliv v průběhu UC
+    stáhnout
+  </li>
+  <li>Admin vyplní textové hodnoty</li>
+  <li>Admin vyplní nastyluje šablonu</li>
+  <li>Admin potvrdí změny</li>
+  <li>Systém uloží změny</li>
+</ol>
+<h2>UC_5 Kontrola výsledků a generace diplomů</h2>
+<h3>Vstupní podmínky</h3>
+<ul>
+  <li>Admin je přihlášený</li>
+  <li>Admin má zobrazenou obrazovku 3</li>
+</ul>
+<ol>
+ <li>Admin klikne na tlačítko generuj diplomy</li>
+ <li>Systém nabídne v dialogovém okně 1 kontrolu a manuální editaci výsledků</li>
+ <li>Pokud admin odmítne systém vygeneruje diplomy a stáhne je na PC</li>
+ <li>Pokud admin s kontrolou souhlasí zobrazí se mu obrazovka 5, kde výsledky hodné diplomů uvidí a může je editovat</li>
+ 
 </ol>
