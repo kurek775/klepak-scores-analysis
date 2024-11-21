@@ -1,0 +1,51 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table persons {
+  id integer [primary key]
+  name varchar
+  crew_id integer
+  category varchar
+}
+
+Table crews {
+  id integer [primary key]
+  leaders varchar[]
+  number integer
+  password varchar
+}
+
+Table results {
+  id integer [primary key]
+  sport_id integer
+  person_id integer
+  score float
+}
+
+Table sports {
+  id integer [primary key]
+  name varchar
+  metric varchar
+}
+
+Table tours {
+  id integer [primary key]
+  year integer
+  part varchar
+  theme varchar
+}
+
+Table templates {
+  id integer [primary key]
+  bgImage blob
+  font blob
+  textPosition varchar
+}
+
+// Relationships
+Ref: persons.crew_id - crews.id
+Ref: results.person_id - persons.id // many-to-one
+Ref: results.sport_id - sports.id // many-to-one
+Ref: tours.id > templates.id // one-to-many
+Ref: tours.id > sports.id // one-to-many
+Ref: tours.id > crews.id // one-to-many
